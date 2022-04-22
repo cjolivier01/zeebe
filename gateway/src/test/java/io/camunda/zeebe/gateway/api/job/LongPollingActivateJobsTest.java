@@ -67,8 +67,8 @@ public final class LongPollingActivateJobsTest {
 
   private static final String TYPE = "test";
 
-  private static final long LONG_POLLING_TIMEOUT = 5000;
-  private static final long PROBE_TIMEOUT = 20000;
+  private static final long LONG_POLLING_TIMEOUT = 60_000;
+  private static final long PROBE_TIMEOUT = 4 * LONG_POLLING_TIMEOUT;
   private static final int FAILED_RESPONSE_THRESHOLD = 3;
   private static final int MAX_JOBS_TO_ACTIVATE = 2;
   private final ControlledActorClock actorClock = new ControlledActorClock();
